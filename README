@@ -1,0 +1,63 @@
+Exemplo Básico de uso do Google C++ Testing Framework
+===============================================
+
+Autores
+------------------------
+  Vitor Gomes <vitor@ieav.cta.br>
+  Gustavo Veras <gustavo@inpe.br>
+
+
+Sobre
+------------------------
+Os códigos-fonte utilizados neste exemplo foram obtidos em http://www.yolinux.com/TUTORIALS/Cpp-GoogleTest.html
+Os arquivos Makefile foram produzidos a partir do exemplo contido no site e adaptados a partir do Makefile distribuído com o GTest.
+
+Estrutura de diretórios
+------------------------
+  ${EXEMPLO_DIR}
+    Raíz do exemplo. Contém o arquivo README
+  ${EXEMPLO_DIR}/src 
+    Contém os códigos-fonte da aplicação exemplo (Somador e Multiplicador) 
+    e Makefile para construção do executável e execução de testes
+  ${EXEMPLO_DIR}/src/test
+    Contém código-fonte dos testes e Makefile para construção do executável do teste
+
+Instalação 
+------------------------
+
+### do Google C++ Testing Framework ###
+  1) Baixe a versão 1.7.0 do framework em https://googletest.googlecode.com/files/gtest-1.7.0.zip
+
+  2) Execute os comandos
+
+    unzip gtest-1.7.0.zip
+    cd gtest-1.7.0
+    ./configure
+    make
+    sudo mv gtest-1.7.0 /opt
+    ln -s /opt/gtest-1.7.0 /opt/gtest
+
+  3) /opt é uma sugestão de destino do framework, sendo possível o uso em outros locais. 
+    O Makefile de test utiliza esse destino como padrão. É necessário alterar a variável 
+    GTEST_DIR caso a pasta destino seja outra.
+
+
+Execução 
+------------------------
+
+Tanto a aplicação como os testes podem ser executados a partir da pasta src. 
+Para execução da aplicação, utilize:
+
+  make run
+
+Para execução dos testes, utilize:
+
+  make check
+
+
+Mais 
+------------------------
+
+[1] Google C++ Testing Framework: http://code.google.com/p/googletest/
+[2] Tutorial YoLinux http://www.yolinux.com/TUTORIALS/Cpp-GoogleTest.html
+
